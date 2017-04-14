@@ -33,10 +33,9 @@
 		padding-bottom: 10rem;
 	}
 	.info {
-		overflow: hidden;		
-		background-color: lightblue;
 		padding-top: 5rem;
-		padding-bottom: 5rem;	}	
+		padding-bottom: 5rem;	
+	}	
 	.navbar {
 		margin-bottom: 0px;
 	}
@@ -47,13 +46,32 @@
 		padding-left:10px;
 		height: 22rem;
 	}
+	.elemental {
+		overflow: hidden;		
+		background-color: white;
+	}
+	.magic-element {
+		margin-top: 10px;
+		max-height: 12rem; 
+		width: auto;
+	}
+	.magic-name {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		max-height: 4rem; 
+		width: auto;
+	}
+	.elemental-description {
+		margin-top: 1rem;
+		margin-bottom: 3rem;
+	}
 	</style>
   </head>
   
   <body>
 	<nav class="navbar navbar-default" style="-webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.1);">
 		<div class="container">	
-			<div class="navbar-header ">
+			<div class="navbar-header">
 			<a href="#"><img src="asset/logo.png" ></a>
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
 				<span class="icon-bar"></span>
@@ -80,7 +98,7 @@
 		<h1 class="container"><b>Magic is real<br>Magic is real in the sense that you can deceive other people into thinking magic is real</b></h1>
 	</section>
 	
-	<section class="info">
+	<section class="info" style="background-color: lightblue;">
 		<div class="container">
 			<div class="col-md-6 text-center">
 				<img style="max-height: 25rem; width: auto;" src="asset/home_what-713573153e344af1a6dad63717e6ef96.png">
@@ -99,8 +117,38 @@
 		</div>
 	</section>
 	
+	<section class="info">
+		<div class="container">
+			<div class="col-md-3 elemental" style="text-align: center;">
+				<a href="#"><img class="magic-element" src="asset/ball.png"></a>
+				<a href="#"><img class="magic-name" src="asset/elemental_name.png"></a>
+				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
+				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
+			</div>
+			<div class="col-md-3 elemental" style="text-align: center;">
+				<a href="#"><img class="magic-element" src="asset/ball.png"></a>
+				<a href="#"><img class="magic-name" src="asset/elemental_name.png"></a>
+				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
+				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
+			</div>
+			<div class="col-md-3 elemental" style="text-align: center;">
+				<a href="#"><img class="magic-element" src="asset/ball.png"></a>
+				<a href="#"><img class="magic-name" src="asset/elemental_name.png"></a>
+				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
+				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
+			</div>
+			<div class="col-md-3 elemental" style="text-align: center;">
+				<a href="#"><img class="magic-element" src="asset/ball.png"></a>
+				<a href="#"><img class="magic-name" src="asset/elemental_name.png"></a>
+				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
+				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
+			</div>	
+		</div>
+	</section>
 	
-  
+ 	<section class="info" style="background-color: lightblue;">
+
+	</section> 
   </body>
   
 </html>  
