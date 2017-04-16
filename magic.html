@@ -15,6 +15,9 @@
 	<style>
 		body {
 			font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+			overflow-x: hidden;
+			position: relative;
+			max-width: 100%;
 		}
 		.search {
 			float: right;
@@ -79,7 +82,7 @@
 			margin-bottom: 3rem;
 		}
 		.slide-info {
-			padding-top: 4rem;
+			padding-top: 2rem;
 		}
 		.slide-word {	
 			padding-left: 1rem;
@@ -130,8 +133,54 @@
 	</nav>
 	
 	<section class="banner">
-		<h1 class="container"><b>Magic is real<br>Magic is real in the sense that you can deceive other people into thinking magic is real</b></h1>
+		<div class="container">
+			<h1 id="banner1" class="animated bounceInRight"><b>Magic is real<br>Magic is real in the sense that you can deceive other people into thinking magic is real</b></h1>
+			<h1 id="banner2" style="display:none;"><b>Magic is real<br>Magic is real in the sense that you can deceive other people into thinking magic is real</b></h1>
+			<h1 id="banner3" style="display:none;"><b>Magic is real<br>Magic is real in the sense that you can deceive other people into thinking magic is real</b></h1>
+		</div>
 	</section>
+	<script>
+		var maxBanner = 3;
+		var currentBanner = 1;
+		
+		function bannerAni() {
+			switch (currentBanner) {
+				case 1:
+					document.getElementById("banner"+currentBanner).className = "animated bounceOutLeft";
+					
+					setTimeout(function() {
+						document.getElementById("banner"+currentBanner).style.display = "none";				
+						currentBanner = currentBanner % maxBanner +1;
+						document.getElementById("banner"+currentBanner).style.display = "block";			
+						document.getElementById("banner"+currentBanner).className = "animated bounceInUp";
+					},500);		
+					break;
+					
+				case 2:
+					document.getElementById("banner"+currentBanner).className = "animated bounceOutDown";
+					
+					setTimeout(function() {
+						document.getElementById("banner"+currentBanner).style.display = "none";				
+						currentBanner = currentBanner % maxBanner +1;
+						document.getElementById("banner"+currentBanner).style.display = "block";			
+						document.getElementById("banner"+currentBanner).className = "animated bounceInLeft";
+					},500);		
+					break;	
+				case 3:
+					document.getElementById("banner"+currentBanner).className = "animated bounceOutLeft";
+					
+					setTimeout(function() {
+						document.getElementById("banner"+currentBanner).style.display = "none";				
+						currentBanner = currentBanner % maxBanner +1;
+						document.getElementById("banner"+currentBanner).style.display = "block";			
+						document.getElementById("banner"+currentBanner).className = "animated bounceInRight";
+					},500);		
+					break;						
+			}			
+		}
+		
+		setInterval(function(){bannerAni()},6000);
+	</script>
 	
 	<section class="info" style="background-color: lightblue;">
 		<div class="container">
@@ -183,16 +232,44 @@
 	
  	<section class="slide-info" style="background-color: lightblue;">
 		<div class="container">
-			<div class="col-xs-8">
-				<div class="slide-word">
-					<h3>Well mate, at least you tried. <br>A sorceress turned me down once. Want to hear the story? </h3>
-					<div class="slide-name">- A Witcher</div>
+			<!--Slide1-->
+			<div id="slide1" class="animated bounceInRight">
+				<div class="col-xs-7">
+					<div class="slide-word">
+						<h3 align="center" >Well mate, at least you tried. <br>A sorceress turned me down once. Want to hear the story? </h3>
+						<div class="slide-name" align="center">- A Witcher</div>
+					</div>		
+					<img class=" slide-photo" src="asset/geralt.png">					
+				</div>	
+			</div>
+			<!--Slide2-->
+			<div id="slide2" class="" style="display: none;">
+				<div class="col-xs-7">
+					<div class="slide-word">
+						<h3 align="center" >Well mate, at least you tried. <br>A Witcher turned me down once. <br>Want to hear the story? </h3>
+						<div class="slide-name" align="center">- A Sorceress</div>
+					</div>		
+					<img class=" slide-photo" src="asset/geralt.png">					
 				</div>		
-				<img class=" slide-photo" src="asset/geralt.png">					
-			</div>	
-			<div class="col-xs-4"></div>	
-		</div>
+			</div>			
+		</div>	
 	</section> 
+	<script>
+		var maxSlide = 2;
+		var currentSlide = 1;
+		
+		function Ani() {
+			document.getElementById("slide"+currentSlide).className = "animated bounceOutLeft";
+			
+			setTimeout(function() {
+				document.getElementById("slide"+currentSlide).style.display = "none";				
+				currentSlide = currentSlide % maxSlide +1;
+				document.getElementById("slide"+currentSlide).style.display = "block";			
+				document.getElementById("slide"+currentSlide).className = "animated bounceInRight";
+			},500);			
+		}
+		setInterval(function(){Ani()},6000);
+	</script>
 	
 	<section class="footer">
 		<div class="container">
