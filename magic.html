@@ -212,25 +212,25 @@
 	<section class="info">
 		<div class="container">
 			<div class="col-md-3 elemental">
-				<a href="#"><img class="magic-element" src="asset/ball_fire_a.png"></a>
+				<a href="#"><img class="magic-element"  onmouseover="hover(1,1,this)" onmouseout="hover(1,2,this)" src="asset/ball_fire_a.png"></a>
 				<a href="#"><img class="magic-name" src="asset/elemental_fire.png"></a>
 				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
 				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
 			</div>
 			<div class="col-md-3 elemental" style="text-align: center;">
-				<a href="#"><img class="magic-element" src="asset/ball_water_a.png"></a>
+				<a href="#"><img class="magic-element" onmouseover="hover(2,1,this)" onmouseout="hover(2,2,this)" src="asset/ball_water_a.png"></a>
 				<a href="#"><img class="magic-name" src="asset/elemental_water.png"></a>
 				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
 				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
 			</div>
 			<div class="col-md-3 elemental" style="text-align: center;">
-				<a href="#"><img class="magic-element" src="asset/ball_thunder_a.png"></a>
+				<a href="#"><img class="magic-element" onmouseover="hover(3,1,this)" onmouseout="hover(3,2,this)" src="asset/ball_thunder_a.png"></a>
 				<a href="#"><img class="magic-name" src="asset/elemental_thunder.png"></a>
 				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
 				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
 			</div>
 			<div class="col-md-3 elemental">
-				<a href="#"><img class="magic-element" src="asset/ball_earth_a.png"></a>
+				<a href="#"><img class="magic-element" onmouseover="hover(4,1,this)" onmouseout="hover(4,2,this)" src="asset/ball_earth_a.png"></a>
 				<a href="#"><img class="magic-name" src="asset/elemental_earth.png"></a>
 				<p class="elemental-description">Enter a keyword and search. One click will open the door to the amazing world of academia.</p>
 				<a href="#" class="btn btn-default" href="#"><b>Learn more</b></a>
@@ -238,6 +238,28 @@
 		</div>
 	</section>
 	<script>
+		function hover(x,y,z) {
+			switch (x) {
+				case 1:
+					x = "fire";
+					break;
+				case 2:
+					x = "water";
+					break;		
+				case 3:
+					x = "thunder";
+					break;
+				case 4:
+					x = "earth";
+					break;					
+			}
+		
+			if (y==1) {
+				z.src = "asset/ball_"+x+"_b.png";	
+			} else if (y==2) {
+				z.src = "asset/ball_"+x+"_a.png";	
+			}
+		}
 	</script>
 	
  	<section class="slide-info" style="background-color: lightblue;">
