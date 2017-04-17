@@ -153,41 +153,33 @@
 	<script>
 		var maxBanner = 3;
 		var currentBanner = 1;
+		var ani_in,ani_out;
 		
 		function bannerAni() {
 			switch (currentBanner) {
 				case 1:
-					document.getElementById("banner"+currentBanner).className = "animated bounceOutLeft";
-					
-					setTimeout(function() {
-						document.getElementById("banner"+currentBanner).style.display = "none";				
-						currentBanner = currentBanner % maxBanner +1;
-						document.getElementById("banner"+currentBanner).style.display = "block";			
-						document.getElementById("banner"+currentBanner).className = "animated bounceInUp";
-					},500);		
+					ani_out = "animated bounceOutLeft";	
+					ani_in = "animated bounceInUp";
 					break;
 					
 				case 2:
-					document.getElementById("banner"+currentBanner).className = "animated bounceOutDown";
-					
-					setTimeout(function() {
-						document.getElementById("banner"+currentBanner).style.display = "none";				
-						currentBanner = currentBanner % maxBanner +1;
-						document.getElementById("banner"+currentBanner).style.display = "block";			
-						document.getElementById("banner"+currentBanner).className = "animated bounceInLeft";
-					},500);		
+					ani_out = "animated bounceOutDown";		
+					ani_in = "animated bounceInLeft";	
 					break;	
 				case 3:
-					document.getElementById("banner"+currentBanner).className = "animated bounceOutLeft";
-					
-					setTimeout(function() {
-						document.getElementById("banner"+currentBanner).style.display = "none";				
-						currentBanner = currentBanner % maxBanner +1;
-						document.getElementById("banner"+currentBanner).style.display = "block";			
-						document.getElementById("banner"+currentBanner).className = "animated bounceInRight";
-					},500);		
+					ani_out = "animated bounceOutLeft";
+					ani_in = "animated bounceInRight";	
 					break;						
-			}			
+			}
+			document.getElementById("banner"+currentBanner).className = ani_out;
+			
+			setTimeout(function() {
+				document.getElementById("banner"+currentBanner).style.display = "none";				
+				currentBanner = currentBanner % maxBanner +1;
+				document.getElementById("banner"+currentBanner).style.display = "block";			
+				document.getElementById("banner"+currentBanner).className = ani_in;
+			},500);	
+			
 		}
 		
 		setInterval(function(){bannerAni()},6000);
@@ -315,19 +307,19 @@
 					<div>College of Winterhold</div>
 					<div>Shatin, N.T. Winterhold</div>
 				</div>
-				<div class="col-md-2" style="text-align: left;margin-top: 1.2rem;">
+				<div class="col-md-2" style="margin-top: 1.2rem;">
 					<a href="#">Media Kit</a>
 					<a href="#">FAQ</a>
 					<a href="#">Terms & Conditions</a>
 					<a href="#">Feedback</a>
 				</div>
-				<div class="col-md-2" style="text-align: left;margin-top: 1.2em;">
+				<div class="col-md-2" style="margin-top: 1.2em;">
 					<a href="#">KEEPFire</a>
 					<a href="#">KEEPWater</a>
 					<a href="#">KEEPThunder</a>
 					<a href="#">KEEPEarth</a>	
 				</div>
-				<div class="col-md-2" style="text-align: left;margin-top: 1.2rem;">
+				<div class="col-md-2" style="margin-top: 1.2rem;">
 					<a href="#">About KEEP</a>
 					<a href="#">News & Events</a>
 					<a href="#">Team</a>
