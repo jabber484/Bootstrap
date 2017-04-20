@@ -84,7 +84,9 @@
 			margin-top: 1rem;
 			margin-bottom: 3rem;
 		}
-		.menu-name {
+		.submenu-name {
+			margin-top: 5px;
+			margin-bottom: 5px;
 			max-height: 1rem;
 		}
 		a {
@@ -124,19 +126,25 @@
 			position: relative;
 			float: left;
 			margin: 15px;;
-		}
+		}		
 		.submenu {
 			position: absolute;
 			top: 53px;
 			display: none;
 			background-color: #f8f8f8;
 		}		
+		.submenu-btn {
+			background-color: transparent;
+			border:none;
+		}
 		.submenu-item {
-			margin-top: 5px;
 			padding-left: 15px;
 			padding-right: 15px;
 			text-align: left;
-		}				
+		}		
+		.dropdown:hover .submenu {
+			display: block;
+		}
 		@media screen and (min-width: 992px){
 			col-md-2 {
 				text-align: right;
@@ -154,13 +162,15 @@
 	<nav class="navbar navbar-default" style="-webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.1);">
 		<div class="container">	
 			<div class="navbar-header">
-			<a href="./magic.html" onmouseover="submenu(0,1)" onmouseout="submenu(0,0)"><img href="#" src="asset/logo.png" ></a>
-			<div id="submenu-logo" class="submenu">
-				<a href="#"><img class="submenu-item menu-name" src="asset/elemental_fire.png"></a>
-				<a href="#"><img class="submenu-item menu-name" src="asset/elemental_water.png"></a>
-				<a href="#"><img class="submenu-item menu-name" src="asset/elemental_thunder.png"></a>
-				<a href="#"><img class="submenu-item menu-name" src="asset/elemental_earth.png"></a>
-			</div>
+			<div class="dropdown" style="position:inline;">
+				<button class="submenu-btn"><img href="./magic.html" src="asset/logo.png"></button>
+				<div id="submenu-logo" class="submenu">
+					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_fire_menu.png"></a>
+					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_water_menu.png"></a>
+					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_thunder_menu.png"></a>
+					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_earth_menu.png"></a>
+				</div>
+			</div>	
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -169,9 +179,9 @@
 			</div>	
 			<div class="collapse navbar-collapse" id="Navbar">			
 				<div class="nav navbar-nav" >
-					<div>
-						<div class="menu" onmouseover="submenu(1,1)" onmouseout="submenu(1,0)"><a href="#">About</a></div>
-						<div id="submenu-about" class="submenu">
+					<div class="dropdown">
+						<button class="submenu-btn menu"><a href="#">About</a></button>
+						<div class="submenu">
 							<a href="#"><p class="submenu-item">Vission & Mission</p></a>
 							<a href="#"><p class="submenu-item">Parnters</p></a>
 							<a href="#"><p class="submenu-item">Collaborator's Projects</p></a>
@@ -189,19 +199,6 @@
 			</div>
 		</div>
 	</nav>
-	<script>
-		function submenu(swt,x) {
-			if (swt == 0)
-				swt = "logo";
-			else
-				swt = "about";
-		
-			if (x==0)
-				document.getElementById("submenu-"+swt).style.display = "none";
-			else
-				document.getElementById("submenu-"+swt).style.display = "block";	
-		}
-	</script>
 	
 	<section class="banner">
 		<div class="container">
