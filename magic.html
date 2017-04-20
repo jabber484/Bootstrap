@@ -87,7 +87,7 @@
 		.submenu-name {
 			margin-top: 5px;
 			margin-bottom: 5px;
-			max-height: 1rem;
+			max-height: 1.3rem;
 		}
 		a {
 			color:#333333;
@@ -129,7 +129,7 @@
 		}		
 		.submenu {
 			position: absolute;
-			top: 53px;
+			top: 50px;
 			display: none;
 			background-color: #f8f8f8;
 		}		
@@ -141,9 +141,15 @@
 			padding-left: 15px;
 			padding-right: 15px;
 			text-align: left;
+			white-space: nowrap;
 		}		
 		.dropdown:hover .submenu {
 			display: block;
+		}
+		.dropdown {
+			float: left;
+			position: relative;
+			display: inline-block;
 		}
 		@media screen and (min-width: 992px){
 			col-md-2 {
@@ -161,36 +167,34 @@
   <body>
 	<nav class="navbar navbar-default" style="-webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.1);">
 		<div class="container">	
-			<div class="navbar-header">
-			<div class="dropdown" style="position:inline;">
-				<button class="submenu-btn"><img href="./magic.html" src="asset/logo.png"></button>
-				<div id="submenu-logo" class="submenu">
-					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_fire_menu.png"></a>
-					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_water_menu.png"></a>
-					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_thunder_menu.png"></a>
-					<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_earth_menu.png"></a>
-				</div>
-			</div>	
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>                        
-			</button>
+			<div class="navbar-header">	
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<div class="dropdown" style="width: auto;">
+					<button class="submenu-btn"><img href="./magic.html" src="asset/logo.png"></button>
+					<div id="submenu-logo" class="submenu">
+						<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_fire_menu.png"></a>
+						<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_water_menu.png"></a>
+						<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_thunder_menu.png"></a>
+						<a href="#"><img class="submenu-item submenu-name" src="asset/elemental_earth_menu.png"></a>
+					</div>
+				</div>				
 			</div>	
 			<div class="collapse navbar-collapse" id="Navbar">			
-				<div class="nav navbar-nav" >
-					<div class="dropdown">
-						<button class="submenu-btn menu"><a href="#">About</a></button>
-						<div class="submenu">
-							<a href="#"><p class="submenu-item">Vission & Mission</p></a>
-							<a href="#"><p class="submenu-item">Parnters</p></a>
-							<a href="#"><p class="submenu-item">Collaborator's Projects</p></a>
-							<a href="#"><p class="submenu-item">Team</p></a>
-						</div>
-						<div class="menu"><a href="#">News & Events</a></div>
-						<div class="menu"><a href="#">Contect Us</a></div>
+				<div class="dropdown">
+					<button class="submenu-btn menu"><a href="#">About</a></button>
+					<div class="submenu">
+						<a href="#"><p class="submenu-item">Vission & Mission</p></a>
+						<a href="#"><p class="submenu-item">Parnters</p></a>
+						<a href="#"><p class="submenu-item">Collaborator's Projects</p></a>
+						<a href="#"><p class="submenu-item">Team</p></a>
 					</div>
-				</div>
+				</div>	
+				<div class="menu"><a href="#">News & Events</a></div>
+				<div class="menu"><a href="#">Contect Us</a></div>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Login</a></li>
 					<li><button type="button" class="btn btn-menu" href="#">Sign Up</button></li>
